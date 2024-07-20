@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 100px;
+}
+.font-feature{
+  font-family:cursive ;
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  * {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  
+@keyframes animateC {
+  0%, 100% { color: rgb(141, 133, 133); transform: rotate(0deg); }
+  50% { color: blue; transform: rotate(45deg); }
+}
+
+@keyframes animateA {
+  0%, 100% { color: indigo;; transform: rotate(0deg); }
+  50% { color: rgba(255, 0, 0, 0.918); transform: rotate(-45deg); }
+}
+
+@keyframes animateT {
+  0%, 100% { color: teal; transform: rotate(0deg); }
+  50% { color: green; transform: rotate(45deg); }
+}
+
+@keyframes animateE {
+  0%, 100% { color: rgb(233, 97, 6); transform: rotate(0deg); }
+  50% { color: rgb(255, 225, 0); transform: rotate(-45deg); }
+}
+
+@keyframes animateG {
+  0%, 100% { color: rgb(241, 10, 191); transform: rotate(0deg); }
+  50% { color: rgb(125, 1, 125); transform: rotate(45deg); }
+}
+
+@keyframes animateO {
+  0%, 100% { color: rgb(125, 1, 125); transform: rotate(0deg); }
+  50% { color: rgb(241, 10, 191); transform: rotate(-45deg); }
+}
+
+@keyframes animateR {
+  0%, 100% { color: rgb(255, 225, 0); transform: rotate(0deg); }
+  50% { color: rgb(233, 97, 6); transform: rotate(45deg); }
+}
+
+@keyframes animateI {
+  0%, 100% { color: rgb(233, 97, 6); transform: rotate(0deg); }
+  50% { color: teal; transform: rotate(-45deg); }
+}
+
+@keyframes animateE2 {
+  0%, 100% { color:rgba(255, 0, 0, 0.918); transform: rotate(0deg); }
+  50% { color: indigo; transform: rotate(45deg); }
+}
+
+@keyframes animateS {
+  0%, 100% { color:blue; transform: rotate(0deg); }
+  50% { color: rgb(141, 133, 133); transform: rotate(-45deg); }
+}
+
+.letter:nth-child(1) {
+  animation: animateC 3s infinite;
+}
+
+.letter:nth-child(2) {
+  animation: animateA 3s infinite;
+}
+
+.letter:nth-child(3) {
+  animation: animateT 3s infinite;
+}
+
+.letter:nth-child(4) {
+  animation: animateE 3s infinite;
+}
+
+.letter:nth-child(5) {
+  animation: animateG 3s infinite;
+}
+
+.letter:nth-child(6) {
+  animation: animateO 3s infinite;
+}
+.letter:nth-child(7) {
+  animation: animateR 3s infinite;
+}
+
+.letter:nth-child(8) {
+  animation: animateI 3s infinite;
+}
+
+.letter:nth-child(9) {
+  animation: animateE2 3s infinite;
+}
+
+.letter:nth-child(10) {
+  animation: animateS 3s infinite;
+}
