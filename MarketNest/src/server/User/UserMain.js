@@ -1,3 +1,4 @@
+const AddtoCart = require("./Addtocart.js");
 const createUser = require("./CreateUser.js");
 const LoginUser = require("./LoginUser.js");
 const updateUser = require("./UpdateUser.js");
@@ -23,6 +24,11 @@ const UserMain = async(app)=>{
       app.post("/server/marketplace/updateuser" , async(req,res)=>{
       
         const result =  await updateUser(req.body)
+        res.json(result)
+      })
+
+      app.post("/server/marketplace/addtocart" , async(req,res)=>{
+        const result = await AddtoCart(req.body)
         res.json(result)
       })
 }

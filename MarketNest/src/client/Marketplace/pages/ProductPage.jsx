@@ -28,22 +28,31 @@ const ProductPage = () => {
     }
 
     try {
+      console.log("Updating cart...");
+    
       const newCartText = carttext === "Add to cart" ? "Remove from cart" : "Add to cart";
       setcarttext(newCartText);
-
+      console.log(product)
       const updatedCart = newCartText === "Remove from cart" 
         ? [...(logindata.user.mycart || []), product._id]
         : (logindata.user.mycart || []).filter(id => id !== product._id);
-
+    
+      console.log("Updated cart:", updatedCart);
+    
       const serversendingdata = {
-        data: {mycart: updatedCart }
+        id: logindata.user._id,
+        cart: updatedCart 
       };
-      const response = await axios.post("/server/updatecreator", serversendingdata);
+    
+      console.log("Sending data to server:", serversendingdata);
+    
+      const response = await axios.post("/server/marketplace/addtocart", serversendingdata);
+      console.log("Server response:", response);
+    
       const newLoginData = { login: true, user: response.data };
-      
       onUpdate(newLoginData);
       localStorage.setItem("logindata", JSON.stringify(newLoginData));
-
+    
       alert(newCartText === "Remove from cart" ? "Product added to cart" : "Product removed from cart");
     } catch (error) {
       console.error("Error updating cart:", error);
