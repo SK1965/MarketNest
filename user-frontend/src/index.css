@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors duration-200;
+  }
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90 dark:hover:bg-primary/80;
+  }
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary/90 dark:hover:bg-secondary/80;
+  }
+  .input {
+    @apply w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md 
+           focus:outline-none focus:ring-2 focus:ring-primary/50 
+           bg-white dark:bg-gray-700 text-gray-900 dark:text-white;
+  }
+  .bg-image{
+    background-image: url("https://plus.unsplash.com/premium_photo-1721080250988-95be925527f3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  }
+}
