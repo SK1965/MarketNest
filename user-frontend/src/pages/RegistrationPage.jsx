@@ -76,7 +76,7 @@ const RegistrationPage = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto">
+    <div className="max-w-md h-screen mx-auto">
       <div className="bg-white rounded-lg shadow-md p-8">
         <h1 className="text-2xl font-bold mb-6">Sign Up</h1>
 

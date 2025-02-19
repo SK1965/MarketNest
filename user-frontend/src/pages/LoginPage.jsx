@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../store/slices/authSlice'; // Your Redux actions
 import toast from 'react-hot-toast';
-import makeAuthenticatedRequest from '../services/AuthenticatedRequest';
+import axios from 'axios';
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({
@@ -21,12 +21,14 @@ const LoginPage = () => {
     setIsLoading(true);
 
     try {
-      const response = await makeAuthenticatedRequest(
+      const response = await axios.post(
         `${import.meta.env.VITE_USER_URL}/login`,
-        "POST",
-        { email: formData.email, password: formData.password }
+        {
+          email: formData.email,
+          password: formData.password
+        }
       );
-
+      console.log(response);
       const user = response.data;
       dispatch(login(user));
 
@@ -47,7 +49,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto">
+    <div className="max-w-md h-screen mx-auto">
       <div className="bg-white rounded-lg shadow-md p-8">
         <h1 className="text-2xl font-bold mb-6">Sign In</h1>
         

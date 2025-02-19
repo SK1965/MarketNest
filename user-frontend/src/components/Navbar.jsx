@@ -20,14 +20,14 @@ function Navbar() {
       <div className="container px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="text-3xl font-bold text-primary dark:text-white">
+          <Link to="/" className="text-2xl font-bold text-primary dark:text-white">
           <span className="font-bold text-primary-600 dark:text-primary-400">
                 MarketNest
              </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:absolute lg:right-16 lg:flex items-center space-x-8 text-xl">
+          <div className="hidden lg:absolute lg:right-16 lg:flex items-center space-x-8 text-lg">
             <Link to="/" className="text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary">Home</Link>
             <Link to="/products" className="text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary">Products</Link>
             

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { login } from '../store/slices/authSlice';
-import { setProducts } from '../store/slices/productsSlice'; // Action to set products
-import { cart } from '../store/slices/cartSlice'; // Action to set cart
 import toast from 'react-hot-toast';
 import makeAuthenticatedRequest from '../services/AuthenticatedRequest';
 
