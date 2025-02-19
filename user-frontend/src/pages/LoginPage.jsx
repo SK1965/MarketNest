@@ -22,7 +22,7 @@ const LoginPage = () => {
 
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_USER_URL}/login`,
+        `https://marketnestuser.onrender.com/api/v1/user/login`,
         {
           email: formData.email,
           password: formData.password
